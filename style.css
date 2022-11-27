@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+body {
+  background-image: url(images/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Comfortaa;
+  margin: 10;
+}
+
+.navbar, .footer {
+  background-color: rgba(247, 234, 225, 0.9);
+}
+
+.footer span {
+  color: #33060c;
+}
+
+.nav-item a {
+  color: #33060c;
+}
