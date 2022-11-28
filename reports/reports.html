@@ -42,6 +42,118 @@
   </nav>
   </head>
   <body>
+    <div class="container">
+      <h1 class="my-2 mt-4">Отзывы наших клиентов</h1>
+      <div class="row row-cols-1 row-cols-md-3 g-5">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/1.jpg">
+            <div class="card-body">
+              <p>
+                Бла бла, бла бла <br>
+                Бла бла бла - бла бла! <br>
+                Бла бла бла.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </li>
+              <li class="list-group-item">Мастер Алина</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/2.jpg">
+            <div class="card-body">
+              <p>
+                Бла бла, бла бла <br>
+                Бла бла бла - бла бла! <br>
+                Бла бла бла.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half"></i>
+              </li>
+              <li class="list-group-item">Мастер Анастасия</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/3.jpg">
+            <div class="card-body">
+              <p>
+                Бла бла, бла бла <br>
+                Бла бла бла - бла бла! <br>
+                Бла бла бла.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </li>
+              <li class="list-group-item">Мастер Елена</li>
+            </ul>
+            <div class="card-footer">
+              Клиент: Шмыженко Анжела
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="my-2">Оставьте ваш отзыв</h1>
+      <form class="row g-3 row-cols-1 row-cols-md-3">
+        <div class="col-md-6">
+          <label for="validationDefault01" class="form-label">Имя</label>
+          <input type="text" class="form-control" id="validationDefault01" placeholder="Ваше имя" required>
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault02" class="form-label">Фамилия</label>
+          <input type="text" class="form-control" id="validationDefault02" placeholder="Ваша фамилия" required>
+        </div>
+        <div class="col-md-12">
+          <label for="floatingTextarea2" class="form-label h4">Расскажите о вашем опыте в Beauty Bar</label>
+          <textarea class="form-control" placeholder="Ваш отзыв" id="floatingTextarea2" style="height: 100px" required></textarea>
+          <div id="passwordHelpBlock" class="form-text">
+            Расскажите, если вас что-то не устроило, или вы хотите выразить благодарность мастеру!
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="formFileMultiple" class="form-label">Добавьте фото к вашему отзыву</label>
+          <input class="form-control" type="file" id="formFileMultiple" multiple>
+        </div>
+        <div class="col">
+          <button class="btn btn-light" type="submit">Отправить отзыв на модерацию</button>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="fieldSet" checked>
+            <label class="form-check-label" for="fieldSet">
+              Анонимный отзыв
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <footer class="text-center footer mt-auto py-0 fixed-bottom lh-sm">
         <div class="container py-0 my-0">
           <section class="mb-0">
