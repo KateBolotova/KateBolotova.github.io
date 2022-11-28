@@ -53,15 +53,15 @@ body.onclick = function () {
   }
 }
 
-function spawnAtMouse()
+function spawnAt(x, y)
 {
   if (clicked && clicked_inner)
   {
     let div = document.createElement('div');
 
     div.style.position = 'absolute';
-    div.style.left = mouseX.toString() + "px";
-    div.style.top = mouseY.toString() + "px";
+    div.style.left = x.toString() + "px";
+    div.style.top = y.toString() + "px";
     div.style.fontSize = '3em';
     div.innerHTML = rand_element(allHearts);
 
@@ -82,4 +82,35 @@ function spawnAtMouse()
   }
 }
 
+function spawnAtMouse()
+{
+  spawnAt(mouseX, mouseY);
+}
+
 setInterval(spawnAtMouse, 30);
+
+// MOBILE
+
+function startup() {
+  body.addEventListener('touchmove', handleMove);
+}
+
+document.addEventListener("DOMContentLoaded", startup);
+
+function handleMove(evt) {
+  evt.preventDefault();
+  const el = document.getElementById('canvas');
+  const ctx = el.getContext('2d');
+  const touches = evt.changedTouches;
+
+  for (let i = 0; i < touches.length; i++) {
+    const color = colorForTouch(touches[i]);
+    const idx = ongoingTouchIndexById(touches[i].identifier);
+
+    if (idx >= 0) {
+      spawnAt(touches[i].pageX, touches[i].pageY);
+
+      ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
+    }
+  }
+}
