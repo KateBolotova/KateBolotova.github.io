@@ -87,7 +87,7 @@ function spawnAtMouse()
   spawnAt(mouseX, mouseY);
 }
 
-setInterval(spawnAtMouse, 30);
+setInterval(spawnAtMouse, 50);
 
 // MOBILE
 
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", startup);
 
 function handleMove(evt) {
   evt.preventDefault();
-  const el = document.getElementById('canvas');
+  const el = body;
   const ctx = el.getContext('2d');
   const touches = evt.changedTouches;
 
