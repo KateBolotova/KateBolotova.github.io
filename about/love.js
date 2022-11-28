@@ -88,29 +88,3 @@ function spawnAtMouse()
 }
 
 setInterval(spawnAtMouse, 50);
-
-// MOBILE
-
-function startup() {
-  body.addEventListener('touchmove', handleMove);
-}
-
-document.addEventListener("DOMContentLoaded", startup);
-
-function handleMove(evt) {
-  evt.preventDefault();
-  const el = body;
-  const ctx = el.getContext('2d');
-  const touches = evt.changedTouches;
-
-  for (let i = 0; i < touches.length; i++) {
-    const color = colorForTouch(touches[i]);
-    const idx = ongoingTouchIndexById(touches[i].identifier);
-
-    if (idx >= 0) {
-      spawnAt(touches[i].pageX, touches[i].pageY);
-
-      ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
-    }
-  }
-}
