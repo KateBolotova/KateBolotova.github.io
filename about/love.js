@@ -37,7 +37,7 @@ let heartDiv = document.createElement('div');
 body.appendChild(heartDiv);
 body.setAttribute('onmousemove', 'updateMousePos(event)');
 
-let allHearts = ['🫀', '💓', '💕', '💖', '💗', '💘', '💙', '💚', '💛', '🧡', '💜', '🖤', '💝', '💞', '🥰', '😍', '😻', ]
+let allHearts = ['🫀', '💓', '💕', '💖', '💗', '💘', '💙', '💚', '💛', '🧡', '💜', '💝', '💞', '🥰', '😍', '😻', ]
 let hearts = [];
 let clicked_inner = false;
 let first_clicked_inner = false;
